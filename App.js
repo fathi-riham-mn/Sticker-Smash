@@ -1,6 +1,7 @@
 import { useState, useRef } from 'react';
 import { StyleSheet, View, Platform } from 'react-native';
 import { captureRef } from 'react-native-view-shot';
+import { BrowserRouter as Router } from "react-router-dom";
 
 import domtoimage from 'dom-to-image';
 
@@ -23,7 +24,9 @@ import EmojiSticker from './components/EmojiSticker';
 // SplashScreen.preventAutoHideAsync();
 // setTimeout(SplashScreen.hideAsync, 5000);
 
-
+<Router basename={process.env.PUBLIC_URL}>
+  <App />
+</Router>
 
 const PlaceHolderImage = require("./assets/images/background-image.jpg");
 
